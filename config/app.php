@@ -178,6 +178,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         // 追加
         Collective\Html\HtmlServiceProvider::class,
+        // 追加
     ],
 
     /*
@@ -229,6 +230,8 @@ return [
         // 追加
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        // 追加
+        'Gravatar' => Thomaswelton\LaravelGravatar\Facades\Gravatar::class,
     ],
 
 ];
