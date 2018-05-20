@@ -4,6 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+
+use App\User;
+use App\Item;
+
 class UsersController extends Controller
 {
     public function show($id)
@@ -16,7 +22,7 @@ class UsersController extends Controller
             'user' => $user,
             'items' => $items,
             'count_want' => $count_want,
-            'count_have' => $count_have,
+            //'count_have' => $count_have,
         ]);
     }
 }

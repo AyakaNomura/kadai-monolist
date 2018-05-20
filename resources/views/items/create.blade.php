@@ -9,8 +9,10 @@
                         {!! Form::text('keyword', $keyword, ['class' => 'form-control input-lg', 'placeholder' => 'キーワードを入力', 'size' => 40]) !!}
                     </div>
                     {!! Form::submit('商品を検索', ['class' => 'btn btn-success btn-lg']) !!}
-                {!! Form::close !!}
+                {!! Form::close() !!}
             </div>
         </div>
     </div>
+
+    @include('items.items', ['items' => $items])
 @endsection
