@@ -16,6 +16,7 @@ class UsersController extends Controller
     {
         $user = User::find($id);
         $count_want = $user->want_items()->count();
+        $count_have = $user->have_items()->count();
         $items = \DB::table('items')->join('item_user', 'items.id', '=', 'item_user.item_id')->select('items.*')->where('item_user.user_id', $user->id)->distinct()->paginate(20);
 
         return view('users.show', [
