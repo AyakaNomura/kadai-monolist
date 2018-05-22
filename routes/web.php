@@ -29,6 +29,7 @@ Route::group(['middleware' => ['auth']], function(){
 
 // ランキング
 Route::get('ranking/want', 'RankingController@want')->name('ranking.want');
+Route::get('ranking/have', 'RankingController@have')->name('ranking.have');
 
 //Want Have を実装
 Route::group(['middleware' => ['auth']], function () {
